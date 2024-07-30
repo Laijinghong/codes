@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        nav {
+            background-color: #00b7ce;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 5em 2em 2em 2em;
+            /* Added top padding to avoid content being hidden behind the fixed nav */
+            text-align: left;
+            background-color: white;
+            max-width: 1200px;
+            margin: 2em auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .icon {
+            margin-top: 2em;
+            text-align: right;
+        }
+
+        .icon img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        .cta button {
+            background-color: #00b7ce;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta button:hover {
+            background-color: #008b9e;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="price.html">PLANS</a>
+        <a href="login.html">LOG IN</a>
+        <a href="service.html">SERVICE</a>
+        <a href="link.html">LINK</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+    <div class="container">
+        <h1>SAFE<span style="color: #00b7ce;">PAY</span></h1>
+        <p>Your First Line of Defense Against Fraud & Money Laundering. Our advanced technology and expert team are
+            dedicated to ensuring your transactions are secure and compliant with all regulatory standards. Join us and
+            experience peace of mind with SafePay.</p>
+        <div class="icon">
+            <img src="img/mag.png" alt="Icon">
+        </div>
+        <div class="cta">
+            <button onclick="location.href='about.html'">Learn More</button>
+        </div>
+    </div>
+</body>
+
+</html>

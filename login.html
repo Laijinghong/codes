@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SafePay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        nav {
+            background-color: #00b7ce;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 5em 2em 2em 2em;
+            /* Added top padding to avoid content being hidden behind the fixed nav */
+        }
+
+        .header-container {
+            text-align: center;
+            padding: 2em 0;
+            color: black;
+            background-color: white;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px);
+            background-color: #34495e;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-box h2 {
+            margin-bottom: 1em;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 0.5em;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #732d91;
+        }
+
+        .login-box .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+        }
+
+        .login-box a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function handleLogin() {
+            window.location.href = "home.html";
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="price.html">PLANS</a>
+        <a href="login.html">LOG IN</a>
+        <a href="service.html">SERVICE</a>
+        <a href="link.html">LINK</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome Back</h2>
+            <p>It's great to see you.<br>Log in to your account below.</p>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="handleLogin()">Log in</button>
+            <div class="links">
+                <a href="forget.html">Forget password?</a>
+                <a href="create.html">Create an account</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

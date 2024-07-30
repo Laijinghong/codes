@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePay Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        nav {
+            background-color: #00b7ce;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 5em 2em 2em 2em;
+            /* Added top padding to avoid content being hidden behind the fixed nav */
+        }
+
+        .header-container {
+            text-align: center;
+            padding: 2em 0;
+            color: black;
+            background-color: white;
+        }
+
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            padding: 2em;
+            background-color: white;
+        }
+
+        .plan {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2em;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .plan h2 {
+            color: #333;
+        }
+
+        .plan p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .plan ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .plan ul li {
+            margin: 1em 0;
+        }
+
+        .plan a {
+            display: block;
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            color: white;
+            background-color: #00b7ce;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .plan a:hover {
+            background-color: #007a93;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="price.html">PLANS</a>
+        <a href="login.html">LOG IN</a>
+        <a href="service.html">SERVICE</a>
+        <a href="link.html">LINK</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+    <div class="header-container">
+        <h1>Select a plan that best fits your needs.</h1>
+    </div>
+    <div class="pricing-plans">
+        <div class="plan">
+            <h2>Free</h2>
+            <p>$0</p>
+            <ul>
+                <li>1 user</li>
+                <li>5 custom fraud detection rules</li>
+                <li>200 transactions/month</li>
+                <li>Basic fraud alerts</li>
+                <li>Email support</li>
+                <li>Limited API access</li>
+            </ul>
+            <a href="topup.html">Select Plan</a>
+        </div>
+        <div class="plan">
+            <h2>Starter</h2>
+            <p>$299/month</p>
+            <ul>
+                <li>5 users</li>
+                <li>20 custom fraud detection rules</li>
+                <li>1000 transactions/month</li>
+                <li>Real-time fraud alerts</li>
+                <li>Priority email support (response within 12 hours)</li>
+                <li>Full API access</li>
+            </ul>
+            <a href="topup.html">Select Plan</a>
+        </div>
+        <div class="plan">
+            <h2>Professional</h2>
+            <p>$499/month</p>
+            <ul>
+                <li>Unlimited users</li>
+                <li>Unlimited custom fraud detection rules</li>
+                <li>Unlimited transactions</li>
+                <li>Advanced real-time fraud alerts with machine learning insights</li>
+                <li>Dedicated account manager</li>
+                <li>24/7 phone and email support</li>
+                <li>Full API access</li>
+                <li>Advanced integration and onboarding support</li>
+                <li>Comprehensive reporting and analytics</li>
+            </ul>
+            <a href="topup.html">Select Plan</a>
+        </div>
+    </div>
+</body>
+
+</html>
