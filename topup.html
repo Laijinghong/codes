@@ -39,7 +39,6 @@
 
         .container {
             padding: 5em 2em 2em 2em;
-            /* Added top padding to avoid content being hidden behind the fixed nav */
         }
 
         .header-container {
@@ -60,6 +59,36 @@
             text-align: center;
             font-size: 2em;
             margin-bottom: 1em;
+            position: relative;
+        }
+
+        .amount input {
+            width: 100%;
+            padding: 0.5em 0.5em 0.5em 2em;
+            font-size: 1em;
+            box-sizing: border-box;
+            -moz-appearance: textfield;
+        }
+
+        .amount::before {
+            content: '$';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Hiding the spin buttons */
+        .amount input::-webkit-outer-spin-button,
+        .amount input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .amount input[type=number] {
+            -moz-appearance: textfield;
         }
 
         .change-amount {
@@ -96,6 +125,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             margin-bottom: 1em;
+            display: none; /* Initially hidden */
         }
 
         .pay-with-card h3 {
@@ -138,9 +168,37 @@
     </style>
     <script>
         function handleTopUp() {
-            alert("Top up successfully!");
+            const amount = document.getElementById('topUpAmount').value;
+            alert(`Top up successfully with $${amount} SGD!`);
             window.location.href = "price.html";
         }
+
+        function togglePayWithCard() {
+            const payWithCardSection = document.querySelector('.pay-with-card');
+            const useAnotherAccount = document.querySelector('input[name="account"][value="another"]').checked;
+            payWithCardSection.style.display = useAnotherAccount ? 'block' : 'none';
+        }
+
+        function validateAmountInput(event) {
+            const input = event.target;
+            const value = input.value;
+            const regex = /^\d*\.?\d{0,2}$/;
+
+            if (!regex.test(value)) {
+                input.value = value.slice(0, -1);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('input[name="account"]').forEach(radio => {
+                radio.addEventListener('change', togglePayWithCard);
+            });
+            // Initial check to display the correct section on load
+            togglePayWithCard();
+
+            // Add input validation
+            document.getElementById('topUpAmount').addEventListener('input', validateAmountInput);
+        });
     </script>
 </head>
 
@@ -158,10 +216,8 @@
         <h1>Top Up</h1>
     </div>
     <div class="top-up-container">
-        <div class="amount">100 SGD</div>
-        <div class="change-amount">
-            <input type="text" placeholder="Other Amount" disabled>
-            <button>Change Amount</button>
+        <div class="amount">
+            <input type="number" id="topUpAmount" placeholder="Enter Amount" min="1" step="0.01">
         </div>
         <div class="account-selection">
             <label>
